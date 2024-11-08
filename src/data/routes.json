@@ -1,0 +1,98 @@
+[
+  {
+    "name": "Route 1234",
+    "steps": [
+      {
+        "type": "PICKUP",
+        "address": "Linjeservice AS, Sandstuveien 70, 0680 Oslo",
+        "tasksCount": 26,
+        "completedTasksCount": 0,
+        "sequence": 1
+      },
+      {
+        "type": "DELIVERY",
+        "address": "Søren Bulls Vei 27, 1051 Oslo",
+        "tasksCount": 2,
+        "completedTasksCount": 0,
+        "sequence": 2
+      },
+      {
+        "type": "DELIVERY",
+        "address": "Nedre Kalbakkvei 22, 0950 Oslo",
+        "tasksCount": 1,
+        "completedTasksCount": 0,
+        "sequence": 3
+      },
+      {
+        "type": "DELIVERY",
+        "address": "Gårdsveien 6, 0952 Oslo",
+        "tasksCount": 3,
+        "completedTasksCount": 0,
+        "sequence": 4
+      },
+      {
+        "type": "DELIVERY",
+        "address": "Stanseveien 33, 0976 Oslo",
+        "tasksCount": 1,
+        "completedTasksCount": 0,
+        "sequence": 5
+      },
+      {
+        "type": "DELIVERY",
+        "address": "Ulvefaret 68, 1488 Løvstad",
+        "tasksCount": 2,
+        "completedTasksCount": 0,
+        "sequence": 6
+      },
+      {
+        "type": "DELIVERY",
+        "address": "Krusesvingen 12, 2068 Jessheim",
+        "tasksCount": 2,
+        "completedTasksCount": 0,
+        "sequence": 7
+      },
+      {
+        "type": "DELIVERY",
+        "address": "Rugdevegen 89, 2069 Jessheim",
+        "tasksCount": 1,
+        "completedTasksCount": 0,
+        "sequence": 8
+      },
+      {
+        "type": "DELIVERY",
+        "address": "Furuholtet 1, 2020 Skedsmokorset",
+        "tasksCount": 1,
+        "completedTasksCount": 0,
+        "sequence": 9
+      },
+      {
+        "type": "DELIVERY",
+        "address": "Kirkeveien 93, 1900 Fetsund",
+        "tasksCount": 3,
+        "completedTasksCount": 0,
+        "sequence": 10
+      },
+      {
+        "type": "DELIVERY",
+        "address": "Rugdevegen 89, 2069 Jessheim",
+        "tasksCount": 1,
+        "completedTasksCount": 0,
+        "sequence": 11
+      },
+      {
+        "type": "DELIVERY",
+        "address": "Ulvefaret 68, 1488 Løvstad",
+        "tasksCount": 4,
+        "completedTasksCount": 0,
+        "sequence": 12
+      },
+      {
+        "type": "END",
+        "address": "Linjeservice AS, Sandstuveien 70, 0680 Oslo",
+        "tasksCount": 0,
+        "completedTasksCount": 0,
+        "sequence": 13
+      }
+    ]
+  }
+]
