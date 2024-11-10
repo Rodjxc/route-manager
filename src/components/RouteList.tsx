@@ -2,7 +2,6 @@ import { useState, useCallback } from "react";
 import { DragDropContext, Droppable, DropResult } from "@hello-pangea/dnd";
 import { RouteStep } from "./RouteStep";
 import type { Route, RouteStep as RouteStepType } from "../types";
-import { GripVertical } from "lucide-react";
 
 interface Props {
   route: Route;
@@ -45,7 +44,6 @@ export const RouteList: React.FC<Props> = ({ route, onRouteUpdate }) => {
             className="space-y-2"
           >
             <div className="flex items-center gap-2 text-gray-500 mb-4 px-4">
-              <GripVertical className="w-5 h-5" />
               <span className="text-sm font-medium">Drag steps to reorder</span>
             </div>
 

@@ -1,6 +1,6 @@
 import { memo } from "react";
 import { Draggable } from "@hello-pangea/dnd";
-import { Package, MapPin, CheckCircle } from "lucide-react";
+import { Package, MapPin, CheckCircle, GripVertical } from "lucide-react";
 import type { RouteStep as RouteStepType } from "../types";
 import { clsx } from "clsx";
 
@@ -40,6 +40,8 @@ export const RouteStep = memo(({ step, index }: Props) => {
         >
           <div className="flex items-center justify-between mb-3">
             <div className="flex items-center gap-2">
+              <GripVertical className="w-5 h-5" />
+
               {getStepIcon()}
               <span className="text-lg font-semibold text-gray-800">
                 Stop #{index + 1} - {step.type}
