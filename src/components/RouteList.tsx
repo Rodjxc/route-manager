@@ -1,6 +1,6 @@
-import React, { useState, useCallback } from "react";
+import { useState, useCallback } from "react";
 import { DragDropContext, Droppable, DropResult } from "@hello-pangea/dnd";
-import RouteStep from "./RouteStep";
+import { RouteStep } from "./RouteStep";
 import type { Route, RouteStep as RouteStepType } from "../types";
 import { GripVertical } from "lucide-react";
 
@@ -9,7 +9,7 @@ interface Props {
   onRouteUpdate: (updatedRoute: Route) => void;
 }
 
-const RouteList: React.FC<Props> = ({ route, onRouteUpdate }) => {
+export const RouteList: React.FC<Props> = ({ route, onRouteUpdate }) => {
   const [steps, setSteps] = useState(route.steps);
 
   const handleDragEnd = useCallback(
@@ -63,5 +63,3 @@ const RouteList: React.FC<Props> = ({ route, onRouteUpdate }) => {
     </DragDropContext>
   );
 };
-
-export default RouteList;

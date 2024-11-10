@@ -1,5 +1,5 @@
 import { useState } from "react";
-import RouteList from "./components/RouteList";
+import { RouteList } from "./components/RouteList";
 import type { Route } from "./types";
 import { MapPin } from "lucide-react";
 import routesData from "./data/routes.json";

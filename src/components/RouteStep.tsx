@@ -9,7 +9,7 @@ interface Props {
   index: number;
 }
 
-const RouteStep = memo(({ step, index }: Props) => {
+export const RouteStep = memo(({ step, index }: Props) => {
   const getStepIcon = () => {
     switch (step.type) {
       case "PICKUP":
@@ -61,7 +61,3 @@ const RouteStep = memo(({ step, index }: Props) => {
     </Draggable>
   );
 });
-
-RouteStep.displayName = "RouteStep";
-
-export default RouteStep;
