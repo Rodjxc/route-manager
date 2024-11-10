@@ -11,6 +11,11 @@ interface Props {
 export const RouteList: React.FC<Props> = ({ route, onRouteUpdate }) => {
   const [steps, setSteps] = useState(route.steps);
 
+  // what I want to happen is that when I drag a step, it will update the sequence of the step
+  // and the steps above it, and the steps below it
+  // so if I drag the first step, it will update the sequence of the second step and the third step
+  // and the fourth step  and so on
+
   const handleDragEnd = useCallback(
     (result: DropResult) => {
       if (!result.destination) return;

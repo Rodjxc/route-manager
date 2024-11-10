@@ -5,7 +5,8 @@ import { MapPin } from "lucide-react";
 import routesData from "./data/routes.json";
 
 function App() {
-  const [route, setRoute] = useState<Route>(routesData[0]);
+  // We set the initial route to the first route in the routesData array and pass the RouteList component the route and the onRouteUpdate function
+  const [route, setRoute] = useState<Route>(routesData[0] as Route);
 
   const handleRouteUpdate = (updatedRoute: Route) => {
     setRoute(updatedRoute);
