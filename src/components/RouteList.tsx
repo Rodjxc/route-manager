@@ -18,17 +18,22 @@ export const RouteList: React.FC<Props> = ({ route, onRouteUpdate }) => {
 
   const handleDragEnd = useCallback(
     (result: DropResult) => {
+      // This is part of the library's types, we call the function based on the result of the dropped item
       if (!result.destination) return;
 
       const items = Array.from(steps);
+      // creates a copy of the steps array to avoid mutatin the original steps array
       const [reorderedItem] = items.splice(result.source.index, 1);
+      // removes one item from the array at source.index (the initial position of the dragged item). Reordered item is now the item
+      // that was dragged
       items.splice(result.destination.index, 0, reorderedItem);
 
-      // Update sequences
+      // inserts the reordered item at destination.index (the new position of the dragged item)
       const updatedItems = items.map((item, index) => ({
         ...item,
         sequence: index + 1,
       }));
+      // updates the steps array with the new sequence numbers
 
       setSteps(updatedItems);
       onRouteUpdate({
@@ -37,6 +42,7 @@ export const RouteList: React.FC<Props> = ({ route, onRouteUpdate }) => {
       });
     },
     [steps, route, onRouteUpdate]
+    // Updates the steps with teh newly reordered list and we call onRouteUpdate with the new steps to update the "route"
   );
 
   return (
