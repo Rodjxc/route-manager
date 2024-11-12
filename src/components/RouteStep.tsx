@@ -22,8 +22,14 @@ export const RouteStep = memo(({ step, index }: Props) => {
     }
   };
 
+  const isDragDisabled = step.type === "PICKUP" || step.type === "END";
+
   return (
-    <Draggable draggableId={`step-${step.sequence}`} index={index}>
+    <Draggable
+      draggableId={`step-${step.sequence}`}
+      isDragDisabled={isDragDisabled}
+      index={index}
+    >
       {(provided, snapshot) => (
         <div
           ref={provided.innerRef}

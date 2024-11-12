@@ -20,6 +20,7 @@ export const RouteList: React.FC<Props> = ({ route, onRouteUpdate }) => {
     (result: DropResult) => {
       // This is part of the library's types, we call the function based on the result of the dropped item
       if (!result.destination) return;
+      if (result.destination.index === 0) return;
 
       const items = Array.from(steps);
       // creates a copy of the steps array to avoid mutatin the original steps array
