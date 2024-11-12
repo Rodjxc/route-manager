@@ -10,6 +10,7 @@ interface Props {
 }
 
 export const RouteStep = memo(({ step, index }: Props) => {
+  //we get a different icon for each step type
   const getStepIcon = () => {
     switch (step.type) {
       case "PICKUP":
