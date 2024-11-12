@@ -40,6 +40,7 @@ export const RouteList: React.FC<Props> = ({ route, onRouteUpdate }) => {
         ...route,
         steps: updatedItems,
       });
+      localStorage.setItem("savedRouteSteps", JSON.stringify(updatedItems));
     },
     [steps, route, onRouteUpdate]
     // Updates the steps with teh newly reordered list and we call onRouteUpdate with the new steps to update the "route"
@@ -55,7 +56,9 @@ export const RouteList: React.FC<Props> = ({ route, onRouteUpdate }) => {
             className="space-y-2"
           >
             <div className="flex items-center gap-2 text-gray-500 mb-4 px-4">
-              <span className="text-sm font-medium">Drag steps to reorder</span>
+              <span className="text-sm font-medium">
+                Drag stops in the route to reorder
+              </span>
             </div>
 
             {steps.map((step: RouteStepType, index: number) => (

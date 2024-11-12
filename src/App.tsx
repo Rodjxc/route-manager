@@ -4,9 +4,16 @@ import type { Route } from "./types";
 import { MapPin } from "lucide-react";
 import routesData from "./data/routes.json";
 
-function App() {
-  // We set the initial route to the first route in the routesData array and pass the RouteList component the route and the onRouteUpdate function
-  const [route, setRoute] = useState<Route>(routesData[0] as Route);
+export function App() {
+  const initialRoute = {
+    ...routesData[0],
+    steps: JSON.parse(
+      localStorage.getItem("savedRouteSteps") ||
+        JSON.stringify(routesData[0].steps)
+    ),
+  };
+
+  const [route, setRoute] = useState<Route>(initialRoute);
 
   const handleRouteUpdate = (updatedRoute: Route) => {
     setRoute(updatedRoute);
@@ -27,5 +34,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
